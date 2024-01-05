@@ -6,7 +6,7 @@ import time
 
 def execute(phno,content):
      pywhatkit.sendwhatmsg_instantly(('+91'+phno),content)
-     time.sleep(1)
+     time.sleep(0.2)
      pyautogui.click(1050, 950)
 
 def emailexecute(email,content):
