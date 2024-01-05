@@ -19,4 +19,4 @@ def emailexecute(email,content):
 class DjappConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'djapp'
-#trial
+#yeh dekh shubham
