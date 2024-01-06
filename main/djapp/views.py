@@ -33,3 +33,6 @@ def  email(request):
         new_email.save()
         emailexecute(email,content)
         return HttpResponse('success!')
+
+def analytics(request):
+    return render(request, 'analytics_home.html')
