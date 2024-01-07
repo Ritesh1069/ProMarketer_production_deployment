@@ -16,6 +16,9 @@ def emailsite(request):
 def contact(request):
     return render(request, 'ContactUs.html')
 
+def insta_analytics(request):
+    return render(request, 'DashIndex.html')
+
 def run(request):
     if request.method == 'POST':
         phone_num = request.POST['phno']

@@ -14,12 +14,21 @@
          top: 0px;
          left: 0px;
         }
-    #navbar{
-        width: 100%;
-        height: 7.5%;
+        .navbar{
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
         background: #181818;
+        width: 100%;
+        position: relative;
+     }
 
-    }
+     .navbar img{
+        height: 40px;
+        margin: 10px 10px;
+        color: wheat;
+     }
     #logo{
         width: 10%;
         height: 6.7%;
@@ -160,11 +169,10 @@ margin-left: 28%;
 </head>
 <main>
     <div id="home">
-        <div id="navbar">
-            <a href="index.html"><img id="logo" src="{% static 'logo1.jpeg' %}"></a>
-            <a href=""><img id="menubar" src="{% static 'whiteMenu.svg' %}"></a>
-           
-        </div>
+        <div class="navbar">
+            <a href="index.html"><<img src="{% static 'logo1.jpeg' %}" alt=""></a>
+            <a href="index.html"><img src="{% static 'whiteMenu.svg' %}" alt=""></a>
+         </div>
         <div id="color_block"></div>
         <div id="heading">
             <h3>Whatsapp Marketing Bot</h3>

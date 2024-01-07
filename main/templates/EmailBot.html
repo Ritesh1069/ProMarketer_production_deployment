@@ -14,12 +14,21 @@
          top: 0px;
          left: 0px;
         }
-    #navbar{
-        width: 100%;
-        height: 7.5%;
+        .navbar{
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
         background: #181818;
+        width: 100%;
+        position: relative;
+     }
 
-    }
+     .navbar img{
+        height: 40px;
+        margin: 10px 10px;
+        color: wheat;
+     }
     #logo{
         width: 10%;
         height: 6.7%;
@@ -158,14 +167,57 @@ left: 4%;
 margin-top: 620px;
 margin-left: 25%;
 }
+
+<!-- upload section-->
+#upld {
+    
+    height: 200px;
+    width: 100%;
+}
+#upload-pic {
+    margin-top: 150px;
+    height: 180px;
+    margin-left: 27%;
+    border-style: dashed;
+    border-width: 2px;
+    border-radius: 6%;
+    padding: 1% 10%;
+    margin-bottom: -2%;
+}
+#upload-pic:hover{
+    background-color: rgb(172, 172, 172);
+}
+#upld-text{
+    margin-left: -25%;
+}
+
+#upld-title{
+    margin-top: -25%;
+    font-size: 1000px;
+    z-index: 9;
+}
+
+#filename-text{
+    margin-left: 8%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: 300px;
+}
     </style>
 </head>
 <main>
+    <script>
+        function getFileName() 
+    {
+            var x = document.getElementById('email')
+            document.getElementById('fileName').innerHTML = x.value.split('\\').pop()
+    }
+    </script>
     <div id="home">
-        <div id="navbar">
-           <a href="index.html"> <img id="logo" src="{% static 'logo1.jpeg' %}"> </a>
-           <a href=""> <img id="menubar" src="{% static 'whiteMenu.svg' %}"> </a>
-        </div>
+        <div class="navbar">
+            <a href="index.html"><<img src="{% static 'logo1.jpeg' %}" alt=""></a>
+            <a href="index.html"><img src="{% static 'whiteMenu.svg' %}" alt=""></a>
+         </div>
         <div id="color_block"></div>
         <div id="heading">
             <h3>Email Marketing Bot</h3>
@@ -178,9 +230,22 @@ margin-left: 25%;
         <div id="form">
             <form id="post-form">
                 {% csrf_token %}
-              <h3>Enter  Email</h3>
-              
-              <input id="email" name="email" type="text" placeholder="Enter the email">
+
+                <div id="upld">
+                    <br>
+                    <p id="upld-title"> Upload Email's : </p>
+                    <label class="w-64 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
+                        <svg id="upload-pic" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                        </svg>
+                        <span id="upld-text">Select a file</span>
+                        <input id="email" name="email" type='file' hidden onchange="getFileName()">
+                    </label>
+                    <br><br>
+                    
+                    <span id="filename-text">File name: <span id="fileName" class="text-primary "> </span></span>
+                </div>
+
               <br>
               <p>Provide Content for marketing </p>
               <input id="content" name="content" type="text" placeholder="enter the message">

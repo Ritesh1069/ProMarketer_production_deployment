@@ -10,4 +10,5 @@ urlpatterns = [
     path('email', views.email, name="emails sent"),
     path('ContactUs.html', views.contact, name='ContactUs Page'),
     path('analytics_home.html', views.analytics, name='analytics page'),
+    path('DashIndex.html', views.insta_analytics, name='Instagram Analytics'),
 ] 
