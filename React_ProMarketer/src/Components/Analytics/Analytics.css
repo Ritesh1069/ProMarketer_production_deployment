@@ -1,0 +1,94 @@
+.right_block{
+    /* height: 900px; */
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    /* position: relative; */
+    /* justify-content: center; */
+    align-items: center;
+    margin-top:80px ;
+    flex-direction: column;
+    /* background-color: rgb(235, 235, 235); */
+    /* gap: 30px; */
+}
+
+.cardss{
+    display: flex;
+    width: 90%;
+    gap: 30px;
+    flex-direction: column;
+
+}
+
+.cardy{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    /* height: 190px; */
+    gap: 10px;
+    background-color: rgb(244, 244, 244);
+}
+
+.cardy_cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 70%;
+    width: 90%;
+}
+
+.cardy img{
+    width:23%;
+    height: 70%;
+    /* margin-top: 10%; */
+    margin: auto;
+    margin-left: 20px;
+}
+
+.cardy_cont p{
+    font-size: 13px;
+    font-weight: 400;
+   margin-top: -6%;
+   width: 80%;
+}
+
+.cardy_cont h6{
+    margin-left: -18%;
+}
+
+.bu{
+    position: absolute;
+    height: 70px;
+    right:16px ;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+    
+
+
+@media(max-width:760px){
+    .img_h1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* width: 10%; */
+    }
+    
+    .right_block{
+        width: 80%;
+        
+    }
+}
+
+
+
