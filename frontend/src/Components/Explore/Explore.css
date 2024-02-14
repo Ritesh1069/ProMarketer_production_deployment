@@ -119,6 +119,7 @@
 #analytics{
   height: 250px;
   margin-top: 10px;
+  margin-bottom: -10px;
 }
 
   @media (max-width:760px){
