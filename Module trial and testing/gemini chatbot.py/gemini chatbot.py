@@ -1,8 +1,3 @@
-"""
-At the command line, only need to run once to install the package via pip:
-
-$ pip install google-generativeai
-"""
 
 import google.generativeai as genai
 
@@ -35,12 +30,8 @@ safety_settings = [
   },
 ]
 
-model = genai.GenerativeModel(model_name="gemini-pro",
-                              generation_config=generation_config,
-                              safety_settings=safety_settings)
-
-prompt_parts = ["what is your name ", "who are you"
-]
-
-response = model.generate_content(prompt_parts)
-print(response.text)
+model = genai.GenerativeModel(model_name="gemini-pro",generation_config=generation_config,safety_settings=safety_settings)
+prompt=input("Enter Product/Marketing description: ")
+full_prompt= ("Provide me short and attractive marketing content in a paragraph format for " +prompt)
+response = model.generate_content(full_prompt)
+print("ProMarketer AI: ",response.text)
