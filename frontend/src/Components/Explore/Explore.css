@@ -133,15 +133,10 @@
 
 }
 #analytics{
-<<<<<<< Updated upstream
-  height: 250px;
-  margin-top: 10px;
-=======
     width: 330px;
     height: auto;
     margin: 10px auto;
     margin-left: 60px;
->>>>>>> Stashed changes
 }
 #ai{
   width: 380px;
