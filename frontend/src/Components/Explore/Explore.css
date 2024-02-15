@@ -133,10 +133,9 @@
 
 }
 #analytics{
-    width: 330px;
-    height: auto;
-    margin: 10px auto;
-    margin-left: 60px;
+  height: 250px;
+  margin-top: 10px;
+  margin-bottom: -10px;
 }
 #ai{
   width: 380px;
