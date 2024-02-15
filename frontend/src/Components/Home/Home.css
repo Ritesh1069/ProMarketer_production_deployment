@@ -74,6 +74,9 @@
        display: none;
 }
 
+
+
+
 @media (max-width:760px){
 
     .img_h1 img{
@@ -94,12 +97,9 @@
         margin-inline: -10%;
     }
 
-    .buttons{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        display: none;
-    }
+   
+
+    
 
     .img_h1 h1{
         margin-top: 5px;

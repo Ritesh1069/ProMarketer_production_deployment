@@ -22,6 +22,7 @@
     background-color: rgb(232, 232, 232);
     outline: none;
     border: 0;
+    /* margin-top: 10px; */
     /* box-decoration-break: none;    */
     /* height: 90%; */
 }
@@ -74,7 +75,10 @@
     color: #008d00;
 }
 
-
+#btns{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
 
 .ai_btn_whtsp{
     position: absolute;
@@ -93,6 +97,15 @@
     cursor: pointer;
     border: none;
     outline: none;
+}
+
+#conty{
+    margin-top: 20px;
+    height: 250px;
+}
+
+.right_block h5{
+    margin-block: 20px;
 }
 
 @media(max-width:760px){
@@ -121,6 +134,15 @@
         margin-bottom: 14%;
         margin-right: 1%;
         width: 60px;
+    }
+
+    #conty{
+        height: 100px;
+    }
+
+    #btns{
+        margin-bottom: -40px;
+        margin-top: 0px;
     }
 }
 

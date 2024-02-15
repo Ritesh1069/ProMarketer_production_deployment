@@ -3,6 +3,7 @@ import Home from '../Components/Home/Home'
 import Explore from '../Components/Explore/Explore'
 import About from '../Components/About/About'
 import Navbar from '../Components/Navbar/Navbar'
+import Contact_x from '../Components/Contact_x'
 
 const Home_y = () => {
   return (
@@ -11,6 +12,7 @@ const Home_y = () => {
       <Home/>
       <Explore/>
       <About/>
+      <Contact_x/>
     </div>
   )
 }

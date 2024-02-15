@@ -20,6 +20,8 @@ import Email_y from './Pages/Email_y'
 import Whatsapp_y from './Pages/Whatsapp_y'
 import Instagram_y from './Pages/Instagram_y'
 import Analytics_y from './Pages/Analytics_y'
+import Contact_y from './Components/Contact'
+import Hampage from './Pages/Hampage'
 
 
 function App() {
@@ -38,6 +40,8 @@ function App() {
             <Route path='/whatsapp' element={<Whatsapp_y/>}/>
             <Route path='/instagram' element={<Instagram_y/>}/>
             <Route path='/analytics' element={<Analytics_y/>}/>
+            <Route path='/contact' element={<Contact_y/>}/>
+            <Route path='/menu' element={<Hampage/>}/>
             <Route path='*' element={<Nopage/>}/>
         </Routes>
       </BrowserRouter>
