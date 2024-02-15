@@ -62,6 +62,48 @@ nav ul{
     display: none;
 }
 
+.logoimg{
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.hamburger{
+    /* box-sizing: border-box; */
+    background-color: rgb(251, 251, 251);
+    color: white;
+    width: 190px;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+    flex-direction: row;
+}
+
+.hamburger ul{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 44px;
+   margin-top: 40px;
+   
+}
+
+.hamburger li{
+    color: white;
+    margin-top: 14px;
+    /* border-bottom: 1px solid black; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width:760px){
     nav ul{
         display: none;

@@ -13,13 +13,14 @@ const Home = () => {
       
         <h1>Increase your Sales, Reach and Profits
          with our<br></br><b>Pro Marketer</b></h1>
+         
          <p>Pro Marketer is an Automated Digital Marketing service . It can be used to Scale your product by various Digital technologies and Platforms to promote products and services as well as to connect with potential customers . It is an Incredibly versatile and powerful tool that can be used in various ways to reach people worldwide. </p>
-         <div className='buttons'>
-         <Button class='blackbox' name='EXPLORE'/>
-         <Button class='outline' name='WHY PROMARKETER'/>
-         <Logins></Logins>
-         </div>
+         {/* <div className='buttons'>
+         <Button className="bbt" class='blackbox' name='EXPLORE'/>
+         <Button className="bbt" class='outline' name='WHY PROMARKETER'/>
+         </div> */}
         </div>
+      
         <div className="x">
         <div className="signing">
 

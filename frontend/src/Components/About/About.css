@@ -51,6 +51,43 @@
 }
 
 
+.divvy{
+    /* margin-top: 90px; */
+    border-top:  2px solid black;
+    margin-bottom: -10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    margin-top: 50px;
+}
+
+#cont_nav{
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+    margin-bottom: 10px;
+}
+
+.abt_learn{
+    display: flex;
+    justify-content: center;
+
+}
+
+.navvv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.heading p{
+    margin-top: 70px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
 @media(max-width:760px){
 
     .abt_img_content img{

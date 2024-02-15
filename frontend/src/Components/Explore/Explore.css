@@ -32,9 +32,9 @@
     margin-left: auto;
     margin-right: auto;
     /* align-items: center; */
-    margin-top: 50px;
+    margin-top: 30px;
     /* margin-bottom: 50px; */
-    padding-bottom: 40px;
+    padding: 12px;
 
 }
 
@@ -47,6 +47,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: rgb(36, 36, 36);
     
+    
   }
 
   /* Styling for the image covering the upper part */
@@ -54,17 +55,21 @@
     width: 100%;
     height: 250px; /* Adjust the height as needed */
     object-fit: cover;
+    margin: 20px auto;
+    margin-left: 100px;
+    /* margin-right: auto; */
     /* top: 3px; */
+    
   }
 
   /* Styling for the lower part with heading, text block, and button */
-  .card .card-content {
+  .card-content {
     padding: 15px;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    /* margin-bottom: 5px; */
   }
   a{
     text-decoration: none;
@@ -96,30 +101,59 @@
     /* margin-bottom: 16px; */
   }
 #insta{
-  width: 300px;
-  height: 300px;
+  width: 290px;
+  height: auto;
   margin-left: 63px;
   margin-bottom: -30px;
   margin-top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 30px; */
+  margin:-10px auto;
+}
+
+#email{
+  margin: 10px auto;
 }
 #whatsapp{
-  width: 250px;
-  height: 240px;
-  margin-left: 90px;
-  margin-bottom: -10px;
-  margin-top: 20px;
+  width: 230px;
+  height: auto;
+  /* margin-top: 50px;  */
+  /* margin:  20px auto; */
+  /* padding: auto; */
+  /* left: 400px; */
+  
 }
 #twitter{
-  width: 250px;
-  height: 225px;
-  margin-left: 90px;
-  /*margin-bottom: -30px;*/
-  margin-top: 25px;
+  width: 210px;
+  height: auto;
+  margin: 30px auto;
+  margin-left: 110px;
+
 }
 #analytics{
+<<<<<<< Updated upstream
   height: 250px;
   margin-top: 10px;
+=======
+    width: 330px;
+    height: auto;
+    margin: 10px auto;
+    margin-left: 60px;
+>>>>>>> Stashed changes
 }
+#ai{
+  width: 380px;
+  height: auto;
+  margin: 20px auto;
+  background-color: rgb(113, 21, 69);
+  border-radius: 10px;
+  margin-left: 28px;
+  margin-top: 40px;
+}
+
+
 
   @media (max-width:760px){
 
@@ -138,8 +172,11 @@
     /* Styling for the image covering the upper part */
     .card img {
       width: 100%;
-      height: 230px; /* Adjust the height as needed */
+      height: 190px; /* Adjust the height as needed */
       object-fit: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       /* top: 3px; */
     }
   
@@ -172,5 +209,48 @@
     .card button {
       display: none;
     }
+
+    #insta{
+      width: 240px;
+      height: auto;
+      margin-left: 63px;
+      margin-bottom: -30px;
+      margin-top: -20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* margin-left: 30px; */
+      margin:-10px auto;
+    }
+    
+    #email{
+      margin: 10px auto;
+    }
+    #whatsapp{
+      width: 190px;
+      height: auto;
+      
+      /* margin-top: 50px;  */
+      margin:  20px auto;
+    }
+    #twitter{
+      width: 150px;
+      height: auto;
+      margin: 30px auto;
+    }
+    #analytics{
+        width: 260px;
+        height: auto;
+        margin: 10px auto;
+    }
+    #ai{
+      width: 280px;
+      height: auto;
+      margin: 20px auto;
+      background-color: rgb(113, 21, 69);
+      border-radius: 10px;
+    }
+    
+    
       
   }

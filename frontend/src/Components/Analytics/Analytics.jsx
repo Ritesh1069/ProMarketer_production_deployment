@@ -2,6 +2,7 @@ import React from 'react'
 import Button from '../Button/Button'
 import './Analytics.css'
 import Navbar from '../Navbar/Navbar'
+import { Link } from 'react-router-dom'
 
 
 const Analytics = () => {
@@ -16,10 +17,10 @@ const Analytics = () => {
         <h1>WELCOME TO <b>INSIGHTS & ANALYTICS</b></h1>
          <p>Insights and analytics provide valuable data-driven insights into various aspects of a business, such as customer behavior, market trends, and performance metrics. By analyzing data from various sources, businesses gain a deeper understanding of their operations and customers, enabling informed decision-making and strategic planning. Insights and analytics tools utilize advanced algorithms and data visualization techniques to transform raw data into actionable insights, empowering businesses to optimize processes, enhance customer experiences, and stay competitive in today's dynamic market landscape.</p>
 
-         <Button class='outline' name='LEARN MORE' style={{ marginBottom:'20px' }}/>
+         <Link to={'/*'}><Button class='outline' name='LEARN MORE' style={{ marginBottom:'20px' }}/></Link>
         </div>
 
-        <div className="right_block">
+        <div  id="anal_block"className="right_block">
             <h5>YOUR CAMPAIGNS</h5>
             <div className="cardss">
                 <div className="cardy">
