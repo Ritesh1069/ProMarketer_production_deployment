@@ -1,13 +1,17 @@
 from django.apps import AppConfig
-import pywhatkit
 from .emailbot import sendMail
+import pywhatkit as w
 import pyautogui
 import time
+import keyboard as k
 
 def execute(phno,content):
-     pywhatkit.sendwhatmsg_instantly(('+91'+phno),content)
-     time.sleep(0.2)
-     pyautogui.click(1050, 950)
+    words = phno.split(",")  # Splitting at the comma delimiter
+    for no in  words:
+         w.sendwhatmsg_instantly(('+91'+no),content,15,True)
+         pyautogui.click(1050, 950)
+         time.sleep(2)
+         k.press_and_release('enter')
 
 def emailexecute(email,content):
         fromEmail = "aiengineer108@gmail.com"
