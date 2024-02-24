@@ -83,8 +83,8 @@
 .ai_btn_whtsp{
     position: absolute;
     /* margin-left: -90px; */
-    bottom: 25%;
-    right: 51%;
+    bottom: 36.5%;
+    right: 52%;
     width: 80px;
     height: 30px;
     background-color: rgb(33, 33, 33);
@@ -131,8 +131,8 @@
     }
     
     .ai_btn_whtsp{
-        margin-bottom: 14%;
-        margin-right: 1%;
+        margin-bottom:4%;
+    
         width: 60px;
     }
 

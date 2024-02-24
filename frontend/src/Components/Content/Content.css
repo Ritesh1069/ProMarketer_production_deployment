@@ -54,7 +54,7 @@
 .ai_btn{
     position: absolute;
     /* margin-left: -90px; */
-    bottom: 22.3%;
+    bottom: 34%;
     right: 9.7%;
     width: 80px;
     height: 30px;
@@ -74,7 +74,7 @@
 .spam_btn{
     position: absolute;
     /* margin-left: -90px; */
-    bottom: 22.3%;
+    bottom: 34%;
     left: 9.7%;
     width: 120px;
     height: 30px;
@@ -108,14 +108,28 @@
     
     .right_block{
         width: 80%;
-        
+        /* font-size: 10px; */
     }
 
     .ai_btn{
-        bottom: 31.5%;
+        bottom: 36.5%;
     }
 
     .spam_btn{
-        bottom: 31.5%;
+        bottom: 36.5%;
     }
+
+   .buttons{
+    margin-bottom: 60px;
+   }
+   
+   .heading p{
+     font-size: 16px;
+   }
+
+   .heading h1{
+      margin-bottom: -50px;
+      margin-top: 20px;
+   }
+
 }
