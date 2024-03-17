@@ -28,7 +28,10 @@
     border-radius: 10px;
     /* height: 190px; */
     gap: 10px;
-    background-color: rgb(244, 244, 244);
+    background-color: rgb(52, 52, 52);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
 }
 
 .cardy_cont{
@@ -38,6 +41,9 @@
     align-items: center;
     height: 70%;
     width: 90%;
+    color: white;
+    justify-content: center;
+    align-items: center;
 }
 
 .cardy img{
@@ -45,7 +51,7 @@
     height: 70%;
     /* margin-top: 10%; */
     margin: auto;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 .cardy_cont p{
@@ -53,17 +59,26 @@
     font-weight: 400;
    margin-top: -6%;
    width: 80%;
+   text-align: center;
 }
 
 .cardy_cont h6{
-    margin-left: -18%;
+    /* margin-left: -18%; */
+    margin-top: -12px;
+    margin-bottom: 40px;
 }
 
 .bu{
-    position: absolute;
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+
     height: 70px;
-    right:16px ;
+    /* right:56px ; */
     align-items: center;
+    /* top: 10px; */
+    /* bottom: 10px; */
+    /* margin-bottom: -320px; */
 }
 
 #anal_block{
@@ -72,7 +87,9 @@
 
 
 
-
+.cardy_cont p{
+    color: white;
+}
 
 
     
@@ -87,9 +104,18 @@
     }
     
     .right_block{
-        width: 80%;
+        width: 90%;
         
     }
+
+    .cardy_cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
 }
 
 

@@ -29,7 +29,7 @@ const Analytics = () => {
                         <h6>INSTAGRAM</h6>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati officia voluptatem, autem quidem aliquam quas in alias necessitatibus reprehenderit exercitationem?</p>
                         <div className="bu">
-                        <Button class='bluebox' name='INSIGTS' />
+                        {/* <Button class='bluebox' name='INSIGTS' /> */}
                         </div>
                      </div>
                 </div>
@@ -40,7 +40,7 @@ const Analytics = () => {
                         <h6>INSTAGRAM</h6>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati officia voluptatem, autem quidem aliquam quas in alias necessitatibus reprehenderit exercitationem?</p>
                         <div className="bu">
-                        <Button class='bluebox' name='INSIGTS' />
+                        {/* <Button class='bluebox' name='INSIGTS' /> */}
                         </div>
                      </div>
                 </div>
@@ -51,7 +51,7 @@ const Analytics = () => {
                         <h6>INSTAGRAM</h6>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati officia voluptatem, autem quidem aliquam quas in alias necessitatibus reprehenderit exercitationem?</p>
                         <div className="bu">
-                        <Button class='bluebox' name='INSIGTS' />
+                        {/* <Button class='bluebox' name='INSIGTS' className='insg_btns'/> */}
                         </div>
                      </div>
                 </div>
