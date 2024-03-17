@@ -26,7 +26,7 @@ const Gemini = () => {
         
             <div className="prompt">
             <input className='prompt_input' type="text" placeholder="Enter Prompt for your Product"  />
-            <Button class='bluebox' name='SUBMIT'/>
+            <Button class='bluebox' name='SUBMIT' id="btnn"/>
             </div>
             <input className="gemini_response" type="text" placeholder="response will be generated here" />   
            

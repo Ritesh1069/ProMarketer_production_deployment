@@ -23,6 +23,7 @@ import Analytics_y from './Pages/Analytics_y'
 import Contact_y from './Components/Contact'
 import Hampage from './Pages/Hampage'
 import Charts from './Pages/Charts'
+import Gemini from './Components/gemini_chatbot/Gemini'
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
             <Route path='/menu' element={<Hampage/>}/>
             <Route path='/charts' element={<Charts/>}/>
             <Route path='*' element={<Nopage/>}/>
+            <Route path='/gemini' element={<Gemini/>}/>
         </Routes>
       </BrowserRouter>
       
