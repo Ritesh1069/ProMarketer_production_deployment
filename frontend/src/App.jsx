@@ -24,6 +24,7 @@ import Contact_y from './Components/Contact'
 import Hampage from './Pages/Hampage'
 import Charts from './Pages/Charts'
 import Gemini from './Components/gemini_chatbot/Gemini'
+import FormComponent from './Components/FormComponent'
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
             <Route path='/charts' element={<Charts/>}/>
             <Route path='*' element={<Nopage/>}/>
             <Route path='/gemini' element={<Gemini/>}/>
+            <Route path='/email_form' element={<FormComponent/>}/>
         </Routes>
       </BrowserRouter>
       

@@ -3,6 +3,7 @@ import Button from '../Button/Button';
 import './Content.css';
 import { FaMagic } from "react-icons/fa";
 import { RiSpamFill } from "react-icons/ri";
+import { Link } from 'react-router-dom';
 
 const Content = (props) => {
   return (
@@ -30,8 +31,8 @@ const Content = (props) => {
 
           <p>OR</p>
           <input className="input" type="email" name="Enter your Emails here" id="inpemail" />
-          <button className='ai_btn'> <FaMagic /> AI</button>
-          <button className='spam_btn'> <RiSpamFill size={20} /> Check Spam</button>
+          <button className='ai_btn'><Link to={'/gemini'}> <FaMagic /> AI</Link></button>
+          <a href="http://localhost:8501/"><button className='spam_btn'> <RiSpamFill size={20} /> Check Spam</button></a>
           <div className='buttons'>
             <Button class='bluebox' name='SUBMIT' />
             <Button class='outline' name='RESET' />
