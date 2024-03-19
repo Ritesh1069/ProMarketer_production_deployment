@@ -1,16 +1,17 @@
 from flask import Flask
 from flask_cors import CORS, cross_origin
 import requests
-
+from backmodules import emailbot
 
 app = Flask(__name__)
 
 @app.route('/WApp')
 @cross_origin(origin='*')
 def WApp():
-    r = requests.get("http://ergast.com/api/f1/current/last/results.json")
-    r = r.json()
-    return r
+    email="hruturajatole@gmail.com"
+    content="hello"
+    emailbot.emailexecute(email,content)
+    return "Messages sent successfully"
 
 
 # Running app

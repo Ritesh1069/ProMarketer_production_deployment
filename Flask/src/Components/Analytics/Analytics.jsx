@@ -35,7 +35,7 @@ const Analytics = () => {
                 </div>
 
                 <div className="cardy">
-                     <img src='newinsta3dlogo.png' alt="" />
+                     <img src='what_3d.png' alt="" id='wht_3d'/>
                      <div className="cardy_cont">
                         <h6>INSTAGRAM</h6>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati officia voluptatem, autem quidem aliquam quas in alias necessitatibus reprehenderit exercitationem?</p>
@@ -46,7 +46,7 @@ const Analytics = () => {
                 </div>
 
                 <div className="cardy">
-                     <img src='newinsta3dlogo.png' alt="" />
+                     <img src='facebook_3d.png' alt=""  id='fb_3d'/>
                      <div className="cardy_cont">
                         <h6>INSTAGRAM</h6>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati officia voluptatem, autem quidem aliquam quas in alias necessitatibus reprehenderit exercitationem?</p>

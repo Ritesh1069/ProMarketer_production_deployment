@@ -15,7 +15,7 @@ const Whatsapp = () => {
       <div class="img_h1">
         <div class="heading">
       
-        <h1>WELCOME TO <b>WHATSAPP-BOT</b></h1>
+        <h1>WELCOME TO <b id='what_color'>WHATSAPP-BOT</b></h1>
          <p>A WhatsApp bot is an automated software designed to interact with users on the WhatsApp platform. Leveraging AI and predefined responses, it can answer queries, provide information, and perform tasks based on user input. WhatsApp bots are employed in various domains, from customer service to marketing, streamlining communication processes. They offer quick responses, gather data, and execute tasks, enhancing user experience and facilitating businesses in managing interactions efficiently on the popular messaging platform.</p>
 
          <Button class='outline' name='LEARN MORE' style={{ marginBottom:'20px' }}/>

@@ -44,6 +44,21 @@
     height: 120px;
   }
 
+  #png_block{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   height: 120px;
+   width:40%
+   /* background-color: white; */
+  }
+
+  #inp_img{
+    width: 60%;
+    height: 100%;
+  }
+
+
 .email_inps{
     display: flex;
     flex-direction: row;
@@ -54,7 +69,7 @@
 .ai_btn{
     position: absolute;
     /* margin-left: -90px; */
-    bottom: 34%;
+    bottom: 33.5%;
     right: 9.7%;
     width: 80px;
     height: 30px;
@@ -74,7 +89,7 @@
 .spam_btn{
     position: absolute;
     /* margin-left: -90px; */
-    bottom: 34%;
+    bottom: 33.5%;
     left: 9.7%;
     width: 120px;
     height: 30px;
@@ -94,6 +109,12 @@
 
 .email_text{
     width: 100%;
+}
+
+#wht_3d{
+    height: 100%;
+    width: 34%;
+    margin-left: -10px;
 }
 
 
@@ -131,5 +152,26 @@
       margin-bottom: -50px;
       margin-top: 20px;
    }
+
+   #png_block{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 120px;
+    width:50%;
+    /* background-color: white; */
+   }
+
+   #inp_img{
+    width: 50px;
+    height: 50px;
+  }
+
+  .email_inps{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    gap: 20px;
+}
 
 }
