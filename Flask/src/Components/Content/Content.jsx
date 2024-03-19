@@ -33,7 +33,7 @@ const Content = (props) => {
           <button className='ai_btn'> <FaMagic /> AI</button>
           <button className='spam_btn'> <RiSpamFill size={20} /> Check Spam</button>
           <div className='buttons'>
-            <Button class='bluebox' name='SUBMIT' />
+            <Button class='bluebox' name='SUBMIT' bid={props.cid}/>
             <Button class='outline' name='RESET' />
           </div>
         </div>

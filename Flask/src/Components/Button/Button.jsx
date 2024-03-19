@@ -3,22 +3,23 @@ import './Button.css'
 import { useState } from 'react'
 
 const Button = (props) => {
-  const [info, setInfo] = useState(null)
+  const [res, setRes] = useState(null)
 
-  const getData = () => {
+  const getData = (a1) => {
+    if(a1=="email"){
     fetch("http://localhost:8080/WApp")
     .then(response => {
-      return response
+      return response.json()
     })
     .then(data => {
-      setInfo(data)
-    })
+      setRes(data.message)
+    })}
   }
 
   return (
     <>
-      <button className={props.class} onClick={getData}>{props.name}</button>
-      <div><p>{ info ? <h1>{info}</h1> : <div/>}</p></div>
+      <button className={props.class} onClick={() => getData(props.bid)}> {props.name}</button>
+      <div id='api_res'><p>{res}</p></div>
     </>
   )
 }

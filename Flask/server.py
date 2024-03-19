@@ -10,8 +10,8 @@ app = Flask(__name__)
 def WApp():
     email="hruturajatole@gmail.com"
     content="hello"
-    emailbot.emailexecute(email,content)
-    return "Messages sent successfully"
+    #emailbot.emailexecute(email,content)
+    return {'message': 'successsful'}
 
 
 # Running app
