@@ -8,7 +8,7 @@ def emailexecute(email,content):
   subject = "PRO MARKETER "
   message = content
   sendMail(fromEmail, email, subject, message)
-  print(f"Mail sent to - {email}")
+  return ("Mail sent to - "+email)
         
         
 def sendMail(fromEmail, toEmail, subject, message):

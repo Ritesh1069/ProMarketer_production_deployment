@@ -3,8 +3,50 @@ import Button from '../Button/Button';
 import './Content.css';
 import { FaMagic } from "react-icons/fa";
 import { RiSpamFill } from "react-icons/ri";
+import { useState } from 'react'
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const Content = (props) => {
+  const [res, setRes] = useState(null)
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [content, setContent] = useState('');
+  const [data, setData] = useState('');
+
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+
+  const handleDataChange = (event) => {
+    setData(event.target.value);
+};
+
+  const handleContentChange = (event) => {
+    setContent(event.target.value);
+  };
+
+  const getData = () => {
+    
+    if(content && (selectedFile || data)){
+      const formData = new FormData();
+      formData.append('inputContent', content);
+      if (selectedFile) {
+        formData.append('file', selectedFile);
+      }
+      if (data) {
+        formData.append('inputData', data);
+      }
+      axios.post('http://localhost:8080/email_data', formData)
+      .then(response => {
+        setRes(response.data.message); // Access the message from the response
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        setRes('An error occurred'+error);
+      });
+    }
+  }
+
   return (
     <>
       <div className="img_h1">
@@ -21,19 +63,21 @@ const Content = (props) => {
             {/* Input block with PNG image background */}
             <label htmlFor="file" id='png_block' className="input">
               <img src="file_logo.png" alt="Upload your .CSV file" className="input-image" id='inp_img'/>
-              <input type="file" name="file" id="file" accept=".csv, .xls, .xlsx" style={{ display: 'none' }} />
+              <input type="file" name="file" id="file" accept=".csv, .xls, .xlsx" style={{ display: 'none' }} onChange={handleFileChange}/>
             </label>
             
             {/* Alternatively, you can use a text input */}
-            <input className='input' type="text" name="Upload your .CSV file" id="file" placeholder='Provide emails directly' />
+            <input className='input' type="text" name="Manual upload" id="file" placeholder='Provide emails directly' value={data} onChange={handleDataChange}/>
           </div>
 
           <p>OR</p>
-          <input className="input" type="email" name="Enter your Emails here" id="inpemail" />
-          <button className='ai_btn'> <FaMagic /> AI</button>
+          <input className="input" type="text" name="Enter your Content here" id="inpemail" value={content} onChange={handleContentChange}/>
+          <Link to={'/gemini'}><button className='ai_btn'> <FaMagic /> AI</button></Link>
           <button className='spam_btn'> <RiSpamFill size={20} /> Check Spam</button>
           <div className='buttons'>
-            <Button class='bluebox' name='SUBMIT' bid={props.cid}/>
+            {/* <Button class='bluebox' name='SUBMIT' bid={props.cid}/> */}
+            <button name='SUBMIT' onClick={getData}>SUBMIT</button>
+            <div id='api_res'><p>{res}</p></div>
             <Button class='outline' name='RESET' />
           </div>
         </div>
