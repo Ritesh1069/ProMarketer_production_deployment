@@ -32,3 +32,18 @@ def find_email_col(csv_file_path):
             email_df[column] = df[column]
     
     return email_df
+
+def find_phone_columns(csv_file_path):
+    # Read the CSV file into a Pandas DataFrame
+    df = pd.read_csv(csv_file_path)
+    phone_df = pd.DataFrame()
+    # Initialize an empty dictionary to store column names and their rows containing phone numbers
+    # Regular expression pattern to match phone numbers (you can adjust it as needed)
+    phone_pattern = r'\b\d{3}[-.\s]?\d{3}[-.\s]?\d{4}\b'
+    
+    # Iterate over each column in the DataFrame
+    for column in df.columns:
+        # Check if any value in the column matches the phone number regex pattern
+        if df[column].astype(str).str.contains(phone_pattern).any():
+            phone_df[column] = df[column]
+    return phone_df

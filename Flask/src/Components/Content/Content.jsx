@@ -42,8 +42,14 @@ const Content = (props) => {
       })
       .catch(error => {
         console.error('Error fetching data:', error);
-        setRes('An error occurred'+error);
+        setRes('Error'+error);
       });
+    }
+    if(content){
+      setRes('No Emails provided, NO Database? no worries use ours!')
+    }
+    else{
+      setRes('No Content provided, Dont have any content? try our AI!')
     }
   }
 
