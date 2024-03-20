@@ -47,3 +47,9 @@ def find_phone_columns(csv_file_path):
         if df[column].astype(str).str.contains(phone_pattern).any():
             phone_df[column] = df[column]
     return phone_df
+
+def remove_space_before_number(input_string):
+    if input_string.startswith(" "):
+        return input_string[1:]
+    else:
+        return input_string

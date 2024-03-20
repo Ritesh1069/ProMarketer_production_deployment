@@ -64,38 +64,39 @@ def WApp_Run():
         number_file=find_data.find_phone_columns(file)
         for number_col in number_file:
             for number in number_file[number_col]:
-                number = str(number)
+                number= str(number)
+                number = str(find_data.remove_space_before_number(number))
                 phn=check_number.add_country_code(number)
                 if (phn):
                     w.sendwhatmsg_instantly(phn,input_content)
-                    time.sleep(2)
+                    time.sleep(0.5)
                     pyautogui.click(1050, 990)
-                    time.sleep(2)
+                    time.sleep(0.5)
                     k.write(input_content)
-                    time.sleep(2)
+                    time.sleep(0.5)
                     k.press_and_release('enter')
-                    time.sleep(2)
+                    time.sleep(0.5)
                     k.press_and_release('ctrl+w')
                     print("message sent to "+phn)
-                    time.sleep(1)
+                    time.sleep(0.5)
     
     if input_data:
         phn_list = input_data.split(',')
         for number in  phn_list:
-            number = str(number)
-            phn=check_number.add_country_code(str(number))
+            number= str(number)
+            number = str(find_data.remove_space_before_number(number))
+            phn=check_number.add_country_code(number)
             if (phn):
                 w.sendwhatmsg_instantly(phn,input_content)
-                time.sleep(2)
                 pyautogui.click(1050, 990)
-                time.sleep(2)
+                time.sleep(0.5)
                 k.write(input_content)
-                time.sleep(2)
+                time.sleep(0.5)
                 k.press_and_release('enter')
-                time.sleep(2)
+                time.sleep(0.5)
                 k.press_and_release('ctrl+w')
                 print("message sent to "+phn)
-                time.sleep(1)
+                time.sleep(0.5)
     return {'message': 'All messages sent successfully'}   
 
 @app.route('/ai_data', methods=["GET", "POST"])
