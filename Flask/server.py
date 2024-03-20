@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 import requests,os
-from backmodules import emailbot, find_data, check_number
+from backmodules import emailbot, find_data, check_number, gemini
 import pandas as pd
 import pywhatkit as w
 import pyautogui
@@ -98,7 +98,13 @@ def WApp_Run():
                 time.sleep(1)
     return {'message': 'All messages sent successfully'}   
 
-
+@app.route('/ai_data', methods=["GET", "POST"])
+def AI_Run():
+    if 'inputData' in request.form:
+        input_data = request.form['inputData']
+        reply=gemini.prompt_msg(input_data)
+        return {'message': reply}
+    
 # Running app
 if __name__ == '__main__':
     app.run(debug=True, port=8080)

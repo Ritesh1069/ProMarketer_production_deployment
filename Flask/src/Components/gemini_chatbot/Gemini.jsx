@@ -4,8 +4,36 @@ import Button from '../Button/Button'
 import { FaMagic } from 'react-icons/fa'
 import { RiSpamFill } from 'react-icons/ri'
 import './Gemini.css'
+import { Link } from 'react-router-dom';
+import { useState } from 'react'
+import axios from 'axios';
 
 const Gemini = () => {
+  const [res, setRes] = useState(null)
+  const [data, setData] = useState('');
+
+  const handleDataChange = (event) => {
+    setData(event.target.value);
+  };
+
+  const getData = () => {
+    if(data){
+      const formData = new FormData();
+      formData.append('inputData', data);
+      axios.post('http://localhost:8080/ai_data', formData)
+      .then(response => {
+        setRes(response.data.message); // Access the message from the response
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        setRes('Error: '+error);
+      });
+  }
+  else{
+    setRes('Error: Please enter your Product/Campaign description')
+  }
+}
+
   return (
 
     <>
@@ -25,11 +53,12 @@ const Gemini = () => {
             <h5>GEMINI AT YOUR SERVICE</h5>
         
             <div className="prompt">
-            <input className='prompt_input' type="text" placeholder="Enter Prompt for your Product"  />
-            <Button class='bluebox' name='SUBMIT' id="btnn"/>
+            <input className='prompt_input' type="text" placeholder="Enter Prompt for your Product" value={data} onChange={handleDataChange} />
+            {/* <Button class='bluebox' name='SUBMIT' id="btnn"/> */}
+            <button name='SUBMIT'  style={{ height: '40px' }} onClick={getData}>SUBMIT</button>
             </div>
-            <input className="gemini_response" type="text" placeholder="response will be generated here" />   
-           
+            {/* <input className="gemini_response" type="text" placeholder="response will be generated here" value={res} />    */}
+           <div style={{marginLeft: 10 , marginRight: 10,textAlign: 'justify', color: 'black'}}><p style={{ fontSize: 20, fontWeight: 'normal' }}>GEMINI AI: {res}</p></div>
         </div>
 
          </div>
