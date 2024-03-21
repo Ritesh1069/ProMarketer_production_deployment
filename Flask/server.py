@@ -105,6 +105,8 @@ def AI_Run():
         input_data = request.form['inputData']
         reply=gemini.prompt_msg(input_data)
         return {'message': reply}
+    else:
+        return {'message': 'Error: Please enter your Product/Campaign description'}
     
 # Running app
 if __name__ == '__main__':

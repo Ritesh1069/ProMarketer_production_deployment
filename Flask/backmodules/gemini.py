@@ -37,3 +37,4 @@ def prompt_msg(txt):
   response = model.generate_content(full_prompt)
   return response.text
   
+# print(prompt_msg("nothing phone 2"))
