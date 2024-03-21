@@ -25,6 +25,11 @@ import Hampage from './Pages/Hampage'
 import Charts from './Pages/Charts'
 import Gemini from './Components/gemini_chatbot/Gemini'
 import FormComponent from './Components/FormComponent'
+import DataComponent from './Components/Analytics_whole/DataComponent'
+import NewDash from './Components/Analytics_whole/NewDash'
+import MainPage from './Components/Analytics_whole/MainPage'
+
+
 
 
 function App() {
@@ -49,6 +54,8 @@ function App() {
             <Route path='*' element={<Nopage/>}/>
             <Route path='/gemini' element={<Gemini/>}/>
             <Route path='/email_form' element={<FormComponent/>}/>
+            <Route path='/anal' element={<NewDash/>}/>
+            <Route path='/mainanal' element={<MainPage/>}/>
         </Routes>
       </BrowserRouter>
       
