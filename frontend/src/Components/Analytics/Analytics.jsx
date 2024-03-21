@@ -23,7 +23,7 @@ const Analytics = () => {
         <div  id="anal_block"className="right_block">
             <h5>YOUR CAMPAIGNS</h5>
             <div className="cardss">
-                <div className="cardy">
+                <Link to={'/mainanal'}><div className="cardy">
                      <img src='newinsta3dlogo.png' alt="" />
                      <div className="cardy_cont">
                         <h6>INSTAGRAM</h6>
@@ -32,29 +32,29 @@ const Analytics = () => {
                         {/* <Button class='bluebox' name='INSIGTS' /> */}
                         </div>
                      </div>
-                </div>
+                </div></Link>
 
-                <div className="cardy">
+                <Link to={'/mainanal'}><div className="cardy">
                      <img src='what_3d.png' alt="" id='wht_3d'/>
                      <div className="cardy_cont">
-                        <h6>INSTAGRAM</h6>
+                        <h6>WHATSAPP</h6>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati officia voluptatem, autem quidem aliquam quas in alias necessitatibus reprehenderit exercitationem?</p>
                         <div className="bu">
                         {/* <Button class='bluebox' name='INSIGTS' /> */}
                         </div>
                      </div>
-                </div>
+                </div></Link>
 
-                <div className="cardy">
+                <Link to={'/mainanal'}><div className="cardy">
                      <img src='facebook_3d.png' alt=""  id='fb_3d'/>
                      <div className="cardy_cont">
-                        <h6>INSTAGRAM</h6>
+                        <h6>FACEBOOK</h6>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati officia voluptatem, autem quidem aliquam quas in alias necessitatibus reprehenderit exercitationem?</p>
                         <div className="bu">
                         {/* <Button class='bluebox' name='INSIGTS' className='insg_btns'/> */}
                         </div>
                      </div>
-                </div>
+                </div></Link>
             </div>
         
         </div>
