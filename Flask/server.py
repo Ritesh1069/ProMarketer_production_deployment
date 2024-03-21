@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 import requests,os
-from backmodules import emailbot, find_data, check_number, gemini
+from backmodules import emailbot, find_data, check_number, gemini, spammy
 import pandas as pd
 import pywhatkit as w
 import pyautogui
@@ -107,6 +107,16 @@ def AI_Run():
         return {'message': reply}
     else:
         return {'message': 'Error: Please enter your Product/Campaign description'}
+    
+@app.route('/spam_data', methods=["GET", "POST"])
+def Spam_run():
+    if 'inputContent' in request.form:
+        input_content = request.form['inputContent']
+        reply=spammy.check_spam(input_content)
+        reply= ('Email Content is '+reply)
+        return {'message': reply}
+    else:
+        return {'message': 'Error: Please enter Email Content to check if it is Spam or not'}
     
 # Running app
 if __name__ == '__main__':

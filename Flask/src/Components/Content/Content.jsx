@@ -12,6 +12,7 @@ const Content = (props) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [content, setContent] = useState('');
   const [data, setData] = useState('');
+  const [spam, setSpam] = useState(null)
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -45,14 +46,32 @@ const Content = (props) => {
         setRes('Error'+error);
       });
     }
-    if(content){
-      setRes('No Emails provided, NO Database? no worries use ours!')
+    else if(content){
+      setRes('Error: No Emails provided, NO Database? no worries use ours!')
     }
     else{
-      setRes('No Content provided, Dont have any content? try our AI!')
+      setRes('Error: No Content provided, Dont have any content? try our AI!')
     }
   }
-
+  
+  const checkSpam = () => {
+    if(content){
+      const formData = new FormData();
+      formData.append('inputContent', content);
+      axios.post('http://localhost:8080/spam_data', formData)
+      .then(response => {
+        setRes(response.data.message); // Access the message from the response
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        setRes('Error'+error);
+      });
+    }
+    else{
+      setRes('Error: Please enter Email Content to check if it is Spam or not')
+    }
+  }
+  
   return (
     <>
       <div className="img_h1">
@@ -79,7 +98,7 @@ const Content = (props) => {
           <p>OR</p>
           <input className="input" type="text" name="Enter your Content here" id="inpemail" value={content} onChange={handleContentChange}/>
           <Link to={'/gemini'}><button className='ai_btn'> <FaMagic /> AI</button></Link>
-          <button className='spam_btn'> <RiSpamFill size={20} /> Check Spam</button>
+          <button className='spam_btn'onClick={checkSpam}> <RiSpamFill size={20} /> Check Spam</button>
           <div className='buttons'>
             {/* <Button class='bluebox' name='SUBMIT' bid={props.cid}/> */}
             <button name='SUBMIT' onClick={getData}>SUBMIT</button>

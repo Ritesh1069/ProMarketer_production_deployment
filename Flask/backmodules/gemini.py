@@ -1,7 +1,4 @@
-
 import google.generativeai as genai
-
-
 
 def prompt_msg(txt):
   genai.configure(api_key="AIzaSyAEEt8P9br-My5d_HFm9ne3tOxNRwxvG_M")
