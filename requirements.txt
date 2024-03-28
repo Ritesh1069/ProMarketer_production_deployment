@@ -7,3 +7,4 @@ keyboard
 google.generativeai
 scikit-learn
 pyvirtualdisplay
+gunicorn
