@@ -6,4 +6,3 @@ pyautogui
 keyboard
 google.generativeai
 scikit-learn
-pickle
