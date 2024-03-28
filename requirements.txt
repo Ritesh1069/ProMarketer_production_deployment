@@ -1,0 +1,9 @@
+flask
+flask_cors
+pandas
+pywhatkit
+pyautogui
+keyboard
+google.generativeai
+sklearn
+pickle
