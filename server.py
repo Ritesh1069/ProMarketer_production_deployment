@@ -9,6 +9,7 @@ import time
 import keyboard as k
 
 app = Flask(__name__)
+app.config['DEBUG'] = False
 CORS(app)
 
 @app.route('/email_data', methods=["GET", "POST"])
