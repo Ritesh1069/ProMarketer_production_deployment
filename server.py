@@ -7,6 +7,7 @@ import time
 
 app = Flask(__name__)
 app.config['DEBUG'] = False
+app.config['DEVELOPMENT'] = False
 CORS(app)
 
 @app.route('/email_data', methods=["GET", "POST"])
