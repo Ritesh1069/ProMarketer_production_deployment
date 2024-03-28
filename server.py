@@ -3,10 +3,7 @@ from flask_cors import CORS, cross_origin
 import requests,os
 from backmodules import emailbot, find_data, check_number, gemini, spammy
 import pandas as pd
-import pywhatkit as w
-import pyautogui
 import time
-import keyboard as k
 
 app = Flask(__name__)
 app.config['DEBUG'] = False
@@ -46,6 +43,11 @@ def Email_Run():
 
 @app.route('/wapp_data', methods=["GET", "POST"])
 def WApp_Run():
+    from pyvirtualdisplay import Display
+    display = Display(visible=0, size=(800, 600))
+    display.start()
+    import pywhatkit as w
+    import pyautogui
     file,input_content,input_data= False,False,False
     if ('file' not in request.files) and ('inputData' not in request.form):
         return {'message': 'No Phone Numbers provided, NO Database? no worries use ours!'}
@@ -98,6 +100,7 @@ def WApp_Run():
                 k.press_and_release('ctrl+w')
                 print("message sent to "+phn)
                 time.sleep(0.5)
+    display.stop()
     return {'message': 'All messages sent successfully'}   
 
 @app.route('/ai_data', methods=["GET", "POST"])
