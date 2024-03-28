@@ -48,6 +48,7 @@ def WApp_Run():
     display.start()
     import pywhatkit as w
     import pyautogui
+    import keyboard as k
     file,input_content,input_data= False,False,False
     if ('file' not in request.files) and ('inputData' not in request.form):
         return {'message': 'No Phone Numbers provided, NO Database? no worries use ours!'}
