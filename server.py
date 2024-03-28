@@ -123,7 +123,4 @@ def Spam_run():
         return {'message': reply}
     else:
         return {'message': 'Error: Please enter Email Content to check if it is Spam or not'}
-    
-# Running app
-if __name__ == '__main__':
-    app.run(debug=False, port=8080)
+
