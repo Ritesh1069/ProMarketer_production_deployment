@@ -6,3 +6,4 @@ pyautogui
 keyboard
 google.generativeai
 scikit-learn
+pyvirtualdisplay
