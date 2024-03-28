@@ -5,5 +5,5 @@ pywhatkit
 pyautogui
 keyboard
 google.generativeai
-sklearn
+scikit-learn
 pickle
